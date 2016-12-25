@@ -14,12 +14,12 @@ namespace quiz {
     public:
         QuizHandler();
 
-        void registerQuiz(const InterfaceQuiz &quiz, unsigned int day, bool isDailyFirst);
-
         std::pair<bool, int> runQuiz(unsigned int day, bool isDailyFirst);
 
     private:
         std::map<std::pair<unsigned int, bool>, InterfaceQuiz &> registeredQuizzes;
+
+        void registerQuiz(const InterfaceQuiz &quiz, unsigned int day, bool isDailyFirst);
     };
 }
 
